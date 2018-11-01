@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,34 +9,64 @@
 	    <meta name="description" content="Hoja de vida Luis Alejandro Medina Guzman">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-		
 		<style type="text/css"></style>
 		<title>Curriculum Vitae</title>
 	</head>
-	<body style="margin: 3em 10em">
+	<body style="margin: 3em 10vw">
 		<header id="header" class=""> 
-			<div id="Logo_Container" style="display: inline-block;height: 10em;">
-						<svg width="auto" height="100%" aria-labelledby="Logo de Luis Medina">
+			<div id="Logo_Container" style="text-align: center;">
+						<svg  height="15vh" width="15vh" aria-labelledby="Logo de Luis Medina">
 								<title id="title_svg">Logo Luis Medina</title>
-				                <desc id="desc_svg">Es el logo de las iniciales de Luis Medina realizado en Adobe Illustrator</desc>
-				                <image xlink:href="rsc/img/Logo_LM.svg" height="100%"></image>
+				                <desc id="desc_svg">
+				                Es el logo de las iniciales de Luis Medina realizado en Adobe Illustrator
+				            	</desc>
+				                <image xlink:href="rsc/img/Logo_LM.svg" height="15vh" width="15vh"></image>
 				        </svg>
 			</div>
-			<div id="titleContainer" style="display: inline-flex;height: 10em;position: absolute;align-items: center;"><h1>Curriculum Vitae</h1></div>
-			<table cellpadding="5px"cellspacing="5px">
-				<tbody>
-					<tr>
-						<td><h2>Nombre:</h2></td>
-						<td>Luis Alejandro</td>	
-						<td><h2>Apellidos:</h2></td>
-						<td>Medina Guzman</td>				
-						<td><h2>Nacimiento:</h2></td>
-						<td> 07 Nomviembre 1991</td>
-						<td><h3>Lugar:</h3><h3></h3></td>
-						<td>Medellin, Colombia</td>
-					</tr>
-				</tbody>
-			</table>
+			<div id="titleContainer" style="text-align: center;">
+				<h1>Curriculum Vitae</h1>
+			</div>
+			<div id="Datos_Personales">
+				<style type="text/css">
+					#Datos_Personales {
+						display: flex;
+						display: -webkit-flex;
+						-webkit-align-items: center;
+						-webkit-justify-content: space-between;
+						-webkit-flex-wrap: wrap;
+						align-items: center;
+						justify-content: space-around;
+						flex-wrap: wrap;
+
+					}
+					#Datos_Personales>div{
+						display: inline-block;
+						text-align: center;
+					}
+					#Datos_Personales>div>h2 , #Datos_Personales>div>h3  { 
+						text-align: center;
+					 }
+
+				</style>
+						<div>
+							<h2>Nombre:</h2>
+							<h3>Luis Alejandro</h3>
+						</div>	
+						<div>
+							<h2>Apellidos:</h2>
+							<h3>Medina Guzman</h3>
+						</div>
+						<div>
+							<h2>F. Nacimiento:</h2>
+							<h3> 07 Nomviembre 1991</h3>
+						</div>
+						<div>
+							<h2>L. Nacimiento:</h2>
+							<h3>Medellin, Colombia</h3>
+						</div>
+				
+			</div>
+			
 		</header>		<!-- /header -->
 		<nav>
 			<ul>
