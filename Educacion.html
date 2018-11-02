@@ -72,7 +72,7 @@
 						</div>
 				
 			</div>	
-		</header>		<!-- /header -->
+		</header>		<!-- header -->
 		<nav class="menu">
 			<style type="text/css">
 				#Navegacion{
@@ -89,10 +89,11 @@
 			</style>
 			<ul id="Navegacion"class="nav nav-tabs">
 				<li class="nav-item"><a class="nav-link " href="index.html" title="Inicio">Inicio</a></li>
-				<li class="nav-item"><a class="nav-link active" href="Educacion.html" title="Educacion">Educacion</a></li>
+				<li class="nav-item"><a class="nav-link active" href="Educacion.html" title="Educacion">Educación</a></li>
 				<li class="nav-item"><a class="nav-link" href="Experiencia.html" title="Experiencia">Experiencia</a></li>
 			</ul>
 		</nav>
+		<!-- menu -->
 		<article style="margin-bottom: 10px">
 			<style type="text/css">
 				th, td {
@@ -100,7 +101,7 @@
 				}
 			</style>
 
-			<h2 style="text-align: center;">Educación</h2>
+			<h2 style="text-align: center;">Educación</h2> <!--Titulo seccion -->
 			<table width="100%" style="text-align: center;">
 				<thead>
 					<th cope="col"> Año </th>
@@ -129,7 +130,7 @@
 					</tr>
 				</tbody>
 			</table>
-
+			<!-- Codifica una Tabla de 4 columnas (Año, Institución, Lugar, ¿Culminó?) por 3 filas (o más si deseas) para indicar los datos sobre tus certificados, cursos, título, entre otros. -->
 			<form action="Educacion_submit" accept-charset="utf-8" style="text-align: center;">
 				<h3>Agregar Estudios:</h3>
 				<fieldset>
@@ -144,19 +145,29 @@
 							 seleccion.innerHTML += "<option value='" + anio + "'>" + anio + "</option>";
 							 }
 						</script>         
-			    	</select>
+			    	</select> <!-- Una lista desplegable para el Año. -->
 	    
-			      <label for="input_institucion">Institucion</label>
+			      <label for="input_institucion">Institución</label>
 			      <input type="text" id="input_institucion" placeholder="Institución" required >
+			      <!-- Una caja de entrada de texto para Institución, agrega la validación de campo requerido. -->
 
 			      <label for="input_lugar">Lugar </label>
 			      <input type="text" id="input_lugar" placeholder="lugar">
+			      <!-- Una caja de entrada de texto largo para Lugar. -->
 
 			      <button type="submit"> Enviar </button>
+			      <!-- Un botón "Enviar" -->
 
 				</fieldset>
    
 			</form>
+			<!--
+			 Dibuja un Formulario titulado "Agregar Estudios" con los siguientes elementos:
+				* Una lista desplegable para el Año.
+				* Una caja de entrada de texto para Institución, agrega la validación de campo requerido.
+				* Una caja de entrada de texto largo para Lugar.
+				* Un botón "Enviar" 
+			-->
 			
 		</article>
 
