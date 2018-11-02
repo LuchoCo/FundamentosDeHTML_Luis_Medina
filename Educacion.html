@@ -12,39 +12,184 @@
 		<style type="text/css"></style>
 		<title>Curriculum Vitae</title>
 	</head>
-	<body style="margin: 3em 10em">
+	<body style="margin: 0 10vw">
 		<header id="header" class=""> 
-			<div id="Logo_Container" style="display: inline-block;height: 10em;">
-						<svg width="auto" height="100%" aria-labelledby="Logo de Luis Medina">
+			<div id="Logo_Container" style="text-align: center;">
+						<svg  height="15vh" width="15vh" aria-labelledby="Logo de Luis Medina">
 								<title id="title_svg">Logo Luis Medina</title>
-				                <desc id="desc_svg">Es el logo de las iniciales de Luis Medina realizado en Adobe Illustrator</desc>
-				                <image xlink:href="rsc/img/Logo_LM.svg" height="100%"></image>
+				                <desc id="desc_svg">
+				                Es el logo de las iniciales de Luis Medina realizado en Adobe Illustrator
+				            	</desc>
+				                <image xlink:href="rsc/img/Logo_LM.svg" height="15vh" width="15vh"></image>
 				        </svg>
 			</div>
-			<div id="titleContainer" style="display: inline-flex;height: 10em;position: absolute;align-items: center;"><h1>Curriculum Vitae</h1></div>
-			<table cellpadding="5px"cellspacing="5px">
+			<div id="titleContainer" style="text-align: center;">
+				<h1>Curriculum Vitae</h1>
+			</div>
+			
+			<div id="Datos_Personales">
+				<style type="text/css">	
+					#Datos_Personales {
+						display: flex;
+						display: -webkit-flex;
+						-webkit-align-items: center;
+						-webkit-justify-content: space-between;
+						-webkit-flex-wrap: wrap;
+						align-items:baseline;
+						justify-content: space-around;
+						flex-wrap: wrap;
+
+					}
+					#Datos_Personales>div{
+						display: inline-block;
+						text-align: center;
+					}
+					#Datos_Personales>h2 , #Datos_Personales>div>h3, #Datos_Personales>div>p  { 
+						text-align: center;
+					 }
+					
+				</style>
+						<h2 style="width: 100%"> Datos Personales </h2>
+
+						<div>
+							<h3>Nombre:</h3>
+							<p><strong>Luis Alejandro</strong></p>
+						</div>	
+						<div>
+							<h3>Apellidos:</h3>
+							<p><strong>Medina Guzman</strong></p>
+						</div>
+						<div>
+							<h3>F. Nacimiento:</h3>
+							<p><strong>07 Nomviembre 1991</strong></p>
+						</div>
+						<div>
+							<h3>L. Nacimiento:</h3>
+							<p><strong>Medellin, Colombia</strong></p>
+						</div>
+				
+			</div>	
+		</header>		<!-- /header -->
+		<nav class="menu">
+			<style type="text/css">
+				#Navegacion{
+					display: flex;
+					display: -webkit-flex;
+					-webkit-align-items: center;
+					-webkit-justify-content: space-between;
+					-webkit-flex-wrap: wrap;
+					align-items: center;
+					justify-content: space-around;
+					flex-wrap: wrap;
+					font-size: 1em;
+				}
+			</style>
+			<ul id="Navegacion"class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link " href="index.html" title="Inicio">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link active" href="Educacion.html" title="Educacion">Educacion</a></li>
+				<li class="nav-item"><a class="nav-link" href="Experiencia.html" title="Experiencia">Experiencia</a></li>
+			</ul>
+		</nav>
+		<article style="margin-bottom: 10px">
+			<style type="text/css">
+				th, td {
+					border-bottom: 1px solid #ddd;
+				}
+			</style>
+
+			<h2 style="text-align: center;">Educación</h2>
+			<table width="100%" style="text-align: center;">
+				<thead>
+					<th cope="col"> Año </th>
+					<th cope="col"> Institución </th>
+					<th cope="col"> Lugar </th>
+					<th cope="col"> ¿Culminó? </th>
+				</thead>
 				<tbody>
 					<tr>
-						<td><h2>Nombre:</h2></td>
-						<td>Luis Alejandro</td>	
-						<td><h2>Apellidos:</h2></td>
-						<td>Medina Guzman</td>				
-						<td><h2>Nacimiento:</h2></td>
-						<td> 07 Nomviembre 1991</td>
-						<td><h3>Lugar:</h3><h3></h3></td>
-						<td>Medellin, Colombia</td>
+						<th scope="row">2013</th>
+						<td>UPB</td>
+						<td>Medellin</td>
+						<td>Administracion de empresas</td>
+					</tr>
+					<tr>
+						<th scope="row">2016</th>
+						<td>UPB</td>
+						<td>Medellin</td>
+						<td>Master Gestion </td>
+					</tr>
+					<tr>
+						<th scope="row">2017</th>
+						<td>CFRE</td>
+						<td>Int</td>
+						<td>Certified Fund Raising Executive</td>
 					</tr>
 				</tbody>
 			</table>
-		</header>		<!-- /header -->
-		<nav>
-			<ul>
-				<li><a href="index.html" title="Inicio">Inicio</a></li>
-				<li><a href="Educacion.html" title="Educacion">Educacion</a></li>
-				<li><a href="Experiencia.html" title="Experiencia">Experiencia</a></li>
-			</ul>
-		</nav>
 
+			<form action="Educacion_submit" accept-charset="utf-8" style="text-align: center;">
+				<h3>Agregar Estudios:</h3>
+				<fieldset>
+					<legend> Por favor ingrese estudios adicionales con los siguientes campos.</legend>
+					<label for="select_anio">Año</label>
+					<select id="select_anio">
+				        <option value="">Año...</option>
+						<script>
+							var seleccion = document.getElementById("select_anio");
+							var anio
+							for ( anio = new Date().getFullYear(); anio > 2000; anio--){
+							 seleccion.innerHTML += "<option value='" + anio + "'>" + anio + "</option>";
+							 }
+						</script>         
+			    	</select>
+	    
+			      <label for="input_institucion">Institucion</label>
+			      <input type="text" id="input_institucion" placeholder="Institución" required >
+
+			      <label for="input_lugar">Lugar </label>
+			      <input type="text" id="input_lugar" placeholder="lugar">
+
+			      <button type="submit"> Enviar </button>
+
+				</fieldset>
+   
+			</form>
+			
+		</article>
+
+		<footer id="footer">
+			<style type="text/css">
+				#footer{
+					background-color: #E8E8E8;
+					display: -webkit-flex; 
+					display: flex;
+					justify-content: center;
+					-webkit-justify-content: center;
+					align-items: center;
+					-webkit-align-items: center;
+					-webkit-flex-wrap: wrap;
+					flex-wrap: wrap;
+				}
+			</style>
+			<h2 style="display: block;">Contacto</h2>
+			<style type="text/css">
+				@media (max-width: 900px) {
+				  #Info_Contacto , #Info_Contacto div{
+				    width: 100%;
+				  }
+	
+				}
+
+				#Info_Contacto address {
+					display: inline-block; 
+					margin: 0 10px;
+				}	
+			</style>
+			<div id="Info_Contacto"style="display: block; margin: 0;text-align: center;">
+				<address><strong>Telefono:</strong> 555-55-55</address>
+				<address><strong>E-mail:</strong> <a href="mailto:luis.medina@example.com?subject=Curriculum" "email me">luis.medina@example.com    </a></address>
+				<address><strong>Facebook:</strong> <a href="https://fb.me" title="Facebook Account"> LuisM </a> </address>
+			</div>
+		</footer>
 	</body>
-
 </html>
